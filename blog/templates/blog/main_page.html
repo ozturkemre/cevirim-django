@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <head>
+        <title>cevirim - Ceviri programım</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.4.1.min.js"></script>
+        <script src="{% static 'js/blog.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    </head>
+    <body>
+        <div class="justified">
+          <textarea rows="10" cols="75" placeholder="Enter text to translate" id="input" ></textarea>
+          <textarea rows="10" cols="74" placeholder="Translated text" disabled="disabled" id="translated"></textarea>
+
+        </div>
+        <div class="dropdowns">
+        <select id="src">
+            <option selected="selected" disabled >Kaynak dil</option>
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+            <option value="ar">Arabic</option>
+            <option value="nl">Dutch</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+        </select>
+        <select id="dest">
+            <option selected="selected" disabled>Hedef dil</option>
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+            <option value="ar">Arabic</option>
+            <option value="nl">Dutch</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+        </select>
+        </div>
+
+        <button>Çevir</button>
+    </body>
+</html>
